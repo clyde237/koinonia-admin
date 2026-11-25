@@ -1,12 +1,12 @@
 # Modules de l’administration Koinonia
 
-Document de réalisation · 23 novembre 2026
+Document de réalisation · 24 novembre 2026
 
 ## Objet et état du projet
 
 Ce document recense les modules de `koinonia-admin`, depuis l’accès des administrateurs jusqu’aux évolutions futures de l’application. Il sert de référence pour les prochains lots de développement.
 
-Le projet utilise React, TypeScript et Vite. Le premier lot comprend désormais la connexion Better Auth, la restauration et la fermeture de session, le changement obligatoire de mot de passe et la création de comptes administratifs avec rôles. Les fonctionnalités métier et les compléments indiqués ci-dessous restent à réaliser.
+Le projet utilise React, TypeScript et Vite. Le premier lot comprend désormais la connexion Better Auth, la restauration et la fermeture de session, le changement obligatoire de mot de passe et la création de comptes administratifs avec rôles. Le frontend comprend maintenant le dashboard, la navigation responsive et les écrans des modules de lancement. La consultation du catalogue et de la Bible utilise les endpoints publics existants. Les écritures métier se préparent localement ; leur persistance et leur diffusion via l’API restent à réaliser. Voir les sources et limites dans `README.md`.
 
 Le périmètre reprend `../PRODUCT.md`, `../Contexte_et_cadrage_MVP.md` et les décisions suivantes prises depuis le cadrage initial.
 
@@ -431,3 +431,9 @@ Le middleware actuel des écritures de profil mobile utilise un marqueur de clie
 Les détails de l’outillage frontend et de la gestion des variables publiques suivent les documentations officielles. [Vite](https://vite.dev/guide/) · [Variables d’environnement Vite](https://vite.dev/guide/env-and-mode.html)
 
 Les contrôles d’accès seront mis en œuvre à chaque requête administrative et avec le périmètre de la ressource. [OWASP Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html)
+
+## Livraison frontend du 24 novembre 2026
+
+Les modules 03 à 19 disposent désormais d’un écran ou d’un parcours dans l’espace de gestion : profil, dashboard, membres, rédaction Breakfast, médiathèque, programmation, préparation Facebook, communautés, adhésions, conversations, modération, événements, notifications, Bible, statistiques, paramètres et journal local.
+
+Les statuts et actions visibles dans ces modules décrivent la préparation sur cet appareil. Ils ne constituent pas une livraison des écritures serveur prévues dans les sections « Travail API ». Les modules 20 à 25 sont présentés dans la page « Modules à venir » et conservent leur statut d’évolution.
